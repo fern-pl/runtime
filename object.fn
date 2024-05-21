@@ -1,6 +1,13 @@
 /// General purpose object functionality.
 module rt.object;
 
+public struct MaskArray(T)
+{
+    nuint length;
+    T* data;
+    nuint* indices;
+}
+
 public:
 /// Shallow clones an object.
 T dup(T)(const T val) trusted
