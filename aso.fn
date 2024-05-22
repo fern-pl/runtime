@@ -9,7 +9,7 @@ module rt.aso;
  * Will probe 5 times until deciding that a key doesn't exist or there is no space,
  * will resize to double the current bucket size if there is no space available.
  */
-public struct AsoArray(K, V)
+internal struct AsoArray(K, V)
 {
     [K, V][] buckets;
 

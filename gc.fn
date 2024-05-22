@@ -63,7 +63,7 @@ public struct GC
     }
 
     // NOTE: Ensure that a root is initially created and subsequently head and tail are set to the same pointer.
-    void create(size_t size = pageSize)
+    void create(nuint size = pageSize)
     {
         // TODO: Not cross platform!
         // TODO: Implement error handling, this should be a critical error upon failure.

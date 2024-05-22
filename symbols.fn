@@ -102,8 +102,8 @@ public class Type : Symbol
     Variable[] fields;
     Function[] functions;
     ubyte[] data;
-    size_t size;
-    size_t align;
+    nuint size;
+    nuint align;
 }
 
 public class Function : Symbol
@@ -113,7 +113,7 @@ public class Function : Symbol
     // Will begin with ret-args and then subsequently all locals.
     Symbol[] locals;
     //Instruction[] instructions;
-    size_t align;
+    nuint align;
 }
 
 
@@ -121,9 +121,9 @@ public class Variable : Symbol
 {
     Type type;
     ubyte[] data;
-    size_t size;
-    size_t align;
-    size_t offset;
+    nuint size;
+    nuint align;
+    nuint offset;
 }
 
 // The tagged is acting like a class here because of kind:heap.

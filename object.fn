@@ -1,11 +1,23 @@
 /// General purpose object functionality.
 module rt.object;
 
-public struct MaskArray(T)
+internal struct MaskArray(T)
 {
     nuint length;
     T* data;
     nuint* indices;
+}
+
+internal struct Box
+{
+    alias V = void;
+    V value;
+
+    this(T)(T val = T->init)
+    {
+        V = T;
+        value = val;
+    }
 }
 
 public:

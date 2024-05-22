@@ -491,7 +491,7 @@ internal:
 
 public:
     // comically long function signature
-    size_t emit(ubyte OP, ubyte SELECTOR = M, ubyte SIZE = 128, ubyte MAP = DEFAULT, ubyte PREFIX = 0, ARGS...)(ARGS args)
+    nuint emit(ubyte OP, ubyte SELECTOR = M, ubyte SIZE = 128, ubyte MAP = DEFAULT, ubyte PREFIX = 0, ARGS...)(ARGS args)
     {
         ubyte[] buffer;
         bool prefixed;
@@ -559,7 +559,7 @@ public:
                 if (x) rex |= (1 << 1);
                 if (b) rex |= (1 << 0);
                 
-                size_t pos = 0;
+                nuint pos = 0;
                 foreach (i; 0..5)
                 {
                     if (buffer[pos] == 0xf2)
